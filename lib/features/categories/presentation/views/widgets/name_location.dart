@@ -16,9 +16,12 @@ class locationtionwidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            landmarkoncatModel.name!,
-            style: Textstyle.textStyle16,
+         Flexible(
+            child: Text(
+              landmarkoncatModel.name!,
+              style: Textstyle.textStyle16,
+              softWrap: true,
+            ),
           ),
           Row(
             children: [
@@ -30,13 +33,8 @@ class locationtionwidget extends StatelessWidget {
               SizedBox(width: 7),
               Text(
                 landmarkoncatModel.location!.governorate!,
-                style: TextStyle(
-                  fontFamily: 'Inter',
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  height: 1.2632,
-                  letterSpacing: 0,
-                ),
+                style: Textstyle.textStyle16,
+                
               ),
             ],
           ),
